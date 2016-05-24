@@ -1,0 +1,35 @@
+{
+
+  "description": "Test extention to interact with YouTube page",
+  "manifest_version": 2,
+  "name": "Emotion Reader",
+  "version": "1.0",
+  "homepage_url": "https://github.com/CyberCRI/YouTubeEmotionReaderExtension",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "beastify@mozilla.org",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "permissions": [
+    "activeTab"
+  ],  
+
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "Emotion Reader",
+    "default_popup": "popup/choose_beast.html"
+  },
+  
+  "web_accessible_resources": [
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
+  ]
+
+}
