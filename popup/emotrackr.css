@@ -1,0 +1,53 @@
+html, body {
+	width: 100px;
+}
+
+.beast {
+	margin: 3% auto;
+	padding: 4px;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: #E5F2F2;
+	cursor: pointer;
+
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
+
+.play {
+	background-image: url('icons/play.png');
+	background-size: 25px 25px;
+	background-position: 0px 7px;
+	background-repeat: no-repeat;
+}
+.pause {
+	background-image: url('icons/pause.png');
+	background-size: 25px 25px;
+	background-position: 0px 7px;
+	background-repeat: no-repeat;
+}
+.right {
+	background-image: url('icons/right.png');
+	background-size: 25px 25px;
+	background-position: 0px 7px;
+	background-repeat: no-repeat;
+}
+
+.time {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
+
+.beast:hover {
+	background-color: #CFF2F2;
+}

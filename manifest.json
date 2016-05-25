@@ -23,13 +23,13 @@
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
     "default_title": "Emotion Reader",
-    "default_popup": "popup/choose_beast.html"
+    "default_popup": "popup/emotrackr.html"
   },
   
   "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
+    "emotrackr/frog.jpg",
+    "emotrackr/turtle.jpg",
+    "emotrackr/snake.jpg"
   ]
 
 }

@@ -5,10 +5,22 @@ beastify():
 * then removes itself as a listener 
 */
 function beastify(request, sender, sendResponse) {
-  removeEverything();
-  insertBeast(request.beastURL);
+  /*removeEverything();*/
+  var videoYT =  document.getElementsByTagName('video')[0];
+  if(request.action == "Pause"){
+    videoYT.pause();
+  }
+  else if(request.action == "Play"){
+    videoYT.play();
+  }
+  else if(request.action == "Right"){
+    videoYT.currentTime++;
+    chrome.runtime.sendMessage({time: videoYT.currentTime});
+  }
+
   chrome.runtime.onMessage.removeListener(beastify);
 }
+
 
 /*
 Remove every node under document.body
