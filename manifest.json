@@ -30,6 +30,32 @@
     "emotrackr/frog.jpg",
     "emotrackr/turtle.jpg",
     "emotrackr/snake.jpg"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["js/debug.js",
+            "js/main.js",
+            "js/engine/game.js",
+            "js/engine/loadstate.js",
+            "js/engine/background.js",
+            "js/engine/collider.js",
+            "js/engine/map.js",
+            "js/engine/utils_canvas.js",
+            "js/engine/camera.js",
+            "js/engine/vector2.js",
+            "js/engine/effectsManager.js",
+            "js/config/assets.js",
+            "js/config/config.js",
+            "js/config/data.js",
+            "js/gameplay/gameplaystate.js",
+            "js/gameplay/player.js",
+            "js/scrolling.js",
+            "js/button.js",
+            "js/textureTilesSheet.js",
+            "main.js"]
+    }
   ]
 
 }

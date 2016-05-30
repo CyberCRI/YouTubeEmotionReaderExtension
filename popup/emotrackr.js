@@ -13,6 +13,7 @@ function beastNameToURL(beastName) {
 }
 
 
+
 /*
 Listen for clicks in the popup.
 

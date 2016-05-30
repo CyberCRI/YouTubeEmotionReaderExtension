@@ -4,6 +4,18 @@ beastify():
 * then inserts the chosen beast
 * then removes itself as a listener 
 */
+
+// if(!document.getElementById("emotion-player")){
+//   var controlBar = document.createElement('div');
+//   controlBar.style = "background-color: black; height:100px;";
+//   controlBar.className = "player-width";
+//   controlBar.id = "emotion-player";
+//   var parentGuest = document.getElementById('placeholder-player');
+//   parentGuest.parentNode.insertBefore(controlBar, parentGuest.nextSibling);
+// }
+
+
+
 function beastify(request, sender, sendResponse) {
   /*removeEverything();*/
   var videoYT =  document.getElementsByTagName('video')[0];

@@ -1,0 +1,1 @@
+var _SUPERGLOBAL_ = null;
