@@ -11,8 +11,8 @@
 	this.tempCanvas = canvas.getBoundingClientRect();
 	this.canvasHeight = 30;
 	this.canvasWidth = this.tempCanvas.width;
-	canvas.width = this.canvasWidth;
-	canvas.height = this.canvasHeight
+	canvas.style.width = this.canvasWidth;
+	canvas.style.height = this.canvasHeight
 	this.context = canvas.getContext("2d");
 	this.dt = 0;
 	this.lastTime = Date.now();
@@ -61,9 +61,9 @@ Game.prototype.initControl = function(canvas) {
 	this.keyBoardMap = {left:81,right:68,space:32 };
 	this.keyBoardValue = {left:0,right:0,space:0 };
 	this.mouse = new Vector2(0,0);
-	document.oncontextmenu = function () {
-		return false;
-	};
+	// document.oncontextmenu = function () {
+	// 	return false;
+	// };
 	var that = this;
 		document.addEventListener('mousedown',function(event) {
 		if( that.currentState.onMouse && event.which === 1) { // event.which == 2 pour click du milieu
@@ -73,10 +73,10 @@ Game.prototype.initControl = function(canvas) {
 			that.currentState.onMouse( {x : mouseX, y : mouseY}, 1, that );
 		}
 		else if(that.currentState.onMouse && event.which === 3) {
-			var clientRect = canvas.getBoundingClientRect();
-			var mouseX = event.clientX-clientRect.left;
-			var mouseY = event.clientY-clientRect.top;
-			that.currentState.onMouse( {x : mouseX, y : mouseY}, 2, that );
+			// var clientRect = canvas.getBoundingClientRect();
+			// var mouseX = event.clientX-clientRect.left;
+			// var mouseY = event.clientY-clientRect.top;
+			// that.currentState.onMouse( {x : mouseX, y : mouseY}, 2, that );
 		}
 	});
 	document.addEventListener('mouseup',function(event) {
