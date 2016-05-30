@@ -13,6 +13,8 @@ window.requestAnimFrame = 	(
 if(document.getElementById("placeholder-player")){
   var videoYT =  document.getElementsByTagName('video')[0];
   var controlBar = document.createElement('canvas');
+  controlBar.className = "player-width";
+  controlBar.height = 30;
   controlBar.id = "emotion-player";
   var parentGuest = document.getElementById('placeholder-player');
   parentGuest.parentNode.insertBefore(controlBar, parentGuest.nextSibling);

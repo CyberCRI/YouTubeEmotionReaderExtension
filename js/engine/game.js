@@ -9,10 +9,8 @@
 	
 	var canvas = this.canvas = document.getElementById("emotion-player");
 	this.tempCanvas = canvas.getBoundingClientRect();
-	this.canvasHeight = 30;
 	this.canvasWidth = this.tempCanvas.width;
-	canvas.style.width = this.canvasWidth;
-	canvas.style.height = this.canvasHeight
+	this.canvasHeight = 30;
 	this.context = canvas.getContext("2d");
 	this.dt = 0;
 	this.lastTime = Date.now();
