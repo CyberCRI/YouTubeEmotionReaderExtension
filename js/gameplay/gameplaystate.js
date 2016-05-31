@@ -32,8 +32,9 @@ GameplayState.prototype.render = function(g) {
 };
 GameplayState.prototype.onMouse = function(pos,which,g) {
 	if(pos.x >= 0 && pos.x <= this.width
-	&& pos.y >= 0 && pos.y <= this.height){
-		this.player.click(pos,which,this.currentTime);
+	&& pos.y >= 0 && pos.y <= this.height
+	&& which){
+		this.player.click(pos,this.currentTime);
 	}
 }
 GameplayState.prototype.createObject = function(o) {

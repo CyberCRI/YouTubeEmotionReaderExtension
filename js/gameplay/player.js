@@ -14,22 +14,23 @@ var Player = function(g) {
 };
 Player.prototype.update = function(g,currentTime,duration) {
 	this.countChangeSizePlayer++;
-	if(this.countChangeSizePlayer % 60 == 0){
-		console.log(duration,currentTime,this.pos.x);
-		this.changeSizeCanvas(g);
-	}
+	// if(this.countChangeSizePlayer % 60 == 0){
+	// 	console.log(duration,currentTime,this.pos.x);
+		// this.changeSizeCanvas(g);
+	// }
 	// console.log('update: ', this.containerPlayer.pos.x, this.containerPlayer.width,duration,currentTime);
 	// console.log('my pos: ', this.pos);
-	this.pos.x = /*this.containerPlayer.pos.x + (*/(this.containerPlayer.width/duration)*currentTime/*)*/;
+	this.pos.x = this.containerPlayer.pos.x + ((this.containerPlayer.width/duration)*currentTime);
 };
 Player.prototype.render = function(g) {
 	g.context.drawImage(this.img,this.pos.x,this.pos.y);
 };
-Player.prototype.click = function(pos,which,currentTime) {
+Player.prototype.click = function(pos,currentTime) {
 	console.log(pos);
 	if(pos.x >= this.containerPlayer.pos.x && pos.x <= this.containerPlayer.width + this.containerPlayer.pos.x
 	&& pos.y >= this.containerPlayer.pos.y && pos.y <= this.containerPlayer.height + this.containerPlayer.pos.y){
 		console.log(currentTime);
+		videoYT.currentTime = (pos.x - this.containerPlayer.pos.x) * (videoYT.duration/this.containerPlayer.width); 
 	}
 };
 Player.prototype.verifiModifSizePlayer = function(g){
@@ -44,8 +45,8 @@ Player.prototype.changeSizeCanvas = function(g) {
 	g.canvasHeight = tempCanvas.height;
 	g.context = canvas.getContext("2d");
 	console.log(canvas);
-	this.containerPlayer.width = g.canvasWidth/* * 0.9*/;
-	this.containerPlayer.height = g.canvasHeight/* * 0.5*/;
+	this.containerPlayer.width = g.canvasWidth * 0.9;
+	this.containerPlayer.height = g.canvasHeight * 0.5;
 	this.containerPlayer.pos = new Vector2(g.canvasWidth * 0.05, 0);
 	console.log(this.containerPlayer.width,this.containerPlayer.height);
 };
