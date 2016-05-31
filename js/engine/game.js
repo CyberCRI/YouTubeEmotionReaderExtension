@@ -12,6 +12,7 @@
 	this.canvasWidth = this.tempCanvas.width;
 	this.canvasHeight = 30;
 	this.context = canvas.getContext("2d");
+	console.log('first canvas: ',canvas);
 	this.dt = 0;
 	this.lastTime = Date.now();
 	this.initControl(canvas);
