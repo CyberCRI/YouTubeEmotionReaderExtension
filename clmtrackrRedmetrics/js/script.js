@@ -26,8 +26,8 @@ websiteID = "d08eb03e-1f07-496e-84c2-13392686d2e1";
 vid.width = overlay.width = sketchCanvas.width = videoSizeX;
 vid.height = overlay.height = sketchCanvas.height = videoSizeY;
 
-game.start();
-game.loop();
+// game.start();
+// game.loop();
 
 
 /********** initiate and param redmetrics **********/

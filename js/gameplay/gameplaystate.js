@@ -8,7 +8,6 @@ GameplayState.prototype.init = function(g) {
 	this.bg = new Backgrd(g,'black');
 	this.width = g.canvasWidth;
 	this.height = g.canvasHeight;
-	console.log('gps', this.width, this.height);
 	this.effects = new EffectsManager();
 	this.cam = new Camera(g.canvasWidth,g.canvasHeight);
 	this.cam.posMax.x = g.canvasWidth;

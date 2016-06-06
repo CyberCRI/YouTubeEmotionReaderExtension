@@ -4,12 +4,9 @@ var Player = function(g) {
 	this.height = g.assets.cursorPlayer.height;
 	this.pos = new Vector2(0,0);
 	this.containerPlayer = {};
-	console.log(g.canvasWidth*0.9);
-	console.log(g.canvasHeight);
 	this.containerPlayer.width = g.canvasWidth * 0.9;
 	this.containerPlayer.height = g.canvasHeight * 0.5;
 	this.countChangeSizePlayer = 0;
-	console.log("container player: ",this.containerPlayer);
 	this.containerPlayer.pos = new Vector2(g.canvasWidth * 0.05, 0);
 };
 Player.prototype.update = function(g,currentTime,duration) {
@@ -26,10 +23,8 @@ Player.prototype.render = function(g) {
 	g.context.drawImage(this.img,this.pos.x,this.pos.y);
 };
 Player.prototype.click = function(pos,currentTime) {
-	console.log(pos);
 	if(pos.x >= this.containerPlayer.pos.x && pos.x <= this.containerPlayer.width + this.containerPlayer.pos.x
 	&& pos.y >= this.containerPlayer.pos.y && pos.y <= this.containerPlayer.height + this.containerPlayer.pos.y){
-		console.log(currentTime);
 		videoYT.currentTime = (pos.x - this.containerPlayer.pos.x) * (videoYT.duration/this.containerPlayer.width); 
 	}
 };
@@ -44,9 +39,7 @@ Player.prototype.changeSizeCanvas = function(g) {
 	g.canvasWidth = tempCanvas.width;
 	g.canvasHeight = tempCanvas.height;
 	g.context = canvas.getContext("2d");
-	console.log(canvas);
 	this.containerPlayer.width = g.canvasWidth * 0.9;
 	this.containerPlayer.height = g.canvasHeight * 0.5;
 	this.containerPlayer.pos = new Vector2(g.canvasWidth * 0.05, 0);
-	console.log(this.containerPlayer.width,this.containerPlayer.height);
 };

@@ -54,6 +54,17 @@
             "js/scrolling.js",
             "js/button.js",
             "js/textureTilesSheet.js",
+            "js/clmtrackr/utils.js",
+            "js/clmtrackr/clmtrackr.js",
+            "js/clmtrackr/model_pca_20_svm_emotionDetection.js",
+            "js/clmtrackr/Stats.js",
+            "js/clmtrackr/d3.min.js",
+            "js/clmtrackr/emotion_classifier.js",
+            "js/clmtrackr/emotionmodel.js",
+            "js/redmetrics/q.js",
+            "js/redmetrics/q-xhr.js",
+            "js/redmetrics/underscore.js",
+            "js/redmetrics/redmetrics.js",
             "main.js"]
     }
   ]
